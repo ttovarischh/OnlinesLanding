@@ -1,0 +1,635 @@
+@charset "UTF-8";
+body {
+  overflow: auto;
+  margin: 0;
+  background-color: #ffffff;
+  background-size: 100% auto;
+  background-position: 0px 0px;
+}
+body p {
+  margin: 0;
+}
+body a {
+  text-decoration: none;
+}
+
+.BodyModalShown {
+  overflow: hidden;
+}
+.BodyModalShown .CourseSummaryItem,
+.BodyModalShown .FaqItem {
+  cursor: default !important;
+}
+
+.Modal {
+  display: none;
+  z-index: 100;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #ffffff;
+  background-size: cover;
+  align-items: center;
+}
+.Modal .ModalContent {
+  display: flex;
+  margin: 0 3vw 0 9.4vw;
+  height: 64%;
+  width: 100%;
+  justify-content: space-between;
+}
+.Modal .ModalContent .ModalInfo {
+  margin-bottom: auto;
+  margin-top: auto;
+}
+.Modal .ModalContent .Number {
+  font-family: Montserrat;
+  font-weight: 600;
+  font-size: 1.8vw;
+  line-height: 1.7vw;
+  margin-bottom: 3%;
+}
+.Modal .ModalContent .Header {
+  font-family: Space Grotesk;
+  font-weight: 500;
+  font-size: 4.7vw;
+  line-height: 5.1vw;
+  letter-spacing: -0.05vw;
+  margin-left: -0.2vw;
+  margin-bottom: 5%;
+}
+.Modal .ModalContent .MainText {
+  font-weight: 400;
+  letter-spacing: 0.045vw;
+}
+.Modal .ModalContent .CloseIconWrapper {
+  flex-shrink: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5vw;
+  height: 2.5vw;
+  background: #d9d9d9;
+  border-radius: 100%;
+}
+.Modal .ModalContent .CloseIconWrapper svg {
+  width: 1.9vw;
+  height: 1.9vw;
+}
+
+.Button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  text-align: center;
+  height: 5vw;
+  width: 27vw;
+  border-radius: 16px;
+  margin-bottom: 1.6vw;
+}
+.Button > * {
+  transition: all 0.5s ease;
+}
+.Button :hover {
+  opacity: 0.7;
+}
+.Button span {
+  font-family: Montserrat;
+  font-size: 1.8vw;
+  line-height: 1.85vw;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+.NoteTwo {
+  font-family: Montserrat;
+  font-weight: 600;
+  font-size: 1.28vw;
+  line-height: 1.28vw;
+  text-align: center;
+  margin: 1.85vw 0 7.1vw 0;
+}
+
+.Title {
+  font-family: Space Grotesk;
+  font-weight: 500;
+  font-size: 3vw;
+  line-height: 3.5vw;
+  letter-spacing: 0.05vw;
+  width: 60vw;
+  margin-bottom: 3.2vw;
+}
+
+.ProsFlexBox {
+  display: flex;
+  flex-direction: column;
+  gap: 1.9vw;
+}
+.ProsFlexBox .ProsWrapper {
+  padding: 2.2vw 2.1vw 2.1vw 2.1vw;
+  display: flex;
+  align-items: baseline;
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
+  gap: 7vw;
+  border-radius: 25px;
+}
+.ProsFlexBox .ProsWrapper .MainText {
+  line-height: 1.5vw;
+  width: 100%;
+  letter-spacing: -0.007vw;
+}
+
+.MainWrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 108px 7.55vw 5.4vw 7.55vw;
+}
+.MainWrapper .CapitalText {
+  font-family: Montserrat;
+  font-weight: 600;
+  font-size: 1.3vw;
+  line-height: 1.7vw;
+  text-transform: uppercase;
+  letter-spacing: -0.01vw;
+  min-width: 25.3vw;
+}
+.MainWrapper .MainHeader {
+  font-family: Space Grotesk;
+  font-size: 4.3vw;
+  font-weight: 600;
+  letter-spacing: 0.2vw;
+  color: rgb(0, 0, 0);
+  line-height: 5.1vw;
+  margin-bottom: 6.6vw;
+}
+.MainWrapper .Header {
+  font-family: Space Grotesk;
+  font-weight: 500;
+  font-size: 4.1vw;
+  line-height: 5.1vw;
+  letter-spacing: 0.25vw;
+  margin-bottom: 3.4vw;
+}
+.MainWrapper .Breadcrumb {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 1vw;
+  line-height: 1vw;
+  text-transform: uppercase;
+  color: #6b6b6b;
+  letter-spacing: -0.04vw;
+}
+.MainWrapper .SubHeader {
+  font-family: Space Grotesk;
+  font-weight: 500;
+  font-size: 3.9vw;
+  line-height: 5.1vw;
+  letter-spacing: -0.1vw;
+  margin: 10.8vw 0 2.6vw 0;
+}
+.MainWrapper .SubTitle {
+  font-weight: 500;
+  color: rgb(0, 0, 0);
+  font-family: Montserrat;
+  font-size: 1.79vw;
+  letter-spacing: 0.6px;
+  line-height: 1.79vw;
+  margin-bottom: 1.3vw;
+}
+.MainWrapper .MainSubTitle {
+  font-weight: 400;
+  color: rgb(0, 0, 0);
+  font-family: Space Grotesk;
+  font-size: 1.79vw;
+  font-variation-settings: "wght" 500;
+  letter-spacing: 0.6px;
+  line-height: 1.79vw;
+  margin-bottom: 2vw;
+}
+.MainWrapper .NoteOne {
+  font-family: Montserrat;
+  font-weight: 500;
+  font-size: 1.28vw;
+  line-height: 1.28vw;
+}
+
+.FutureWrapper {
+  display: flex;
+  flex-direction: column;
+  margin-top: 5.9vw;
+}
+.FutureWrapper .FutureListWrapper {
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
+  display: flex;
+  padding: 2.4vw 13vw 2.5vw 6.4vw;
+  justify-content: space-between;
+  border-radius: 25px;
+}
+.FutureWrapper .FutureListWrapper ul {
+  padding: 0;
+  display: inline-block;
+  max-width: 16.2vw;
+}
+.FutureWrapper .FutureListWrapper ul li {
+  font-family: Montserrat;
+  font-weight: 400;
+  font-size: 1.28vw;
+  line-height: 1.8vw;
+  list-style: none;
+  text-indent: -1.1vw;
+  padding-left: 1.1vw;
+  margin-bottom: 0.2vw;
+}
+.FutureWrapper .FutureListWrapper ul li:before {
+  content: "·";
+  font-size: 2vw;
+  vertical-align: text-top;
+  line-height: 1.8vw;
+  margin-right: 0.7vw;
+}
+
+.MainText {
+  font-family: Montserrat;
+  font-weight: 500;
+  font-size: 1.28vw;
+  width: 40vw;
+  line-height: 1.8vw;
+  letter-spacing: -0.02vw;
+}
+
+.MainTextWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5vw;
+}
+
+.TuitionFlexBox {
+  display: flex;
+  justify-content: space-between;
+  z-index: 10;
+}
+.TuitionFlexBox .TuitionInfoWrapper {
+  background: #ffffff;
+  display: flex;
+  width: 44.5vw;
+  padding: 2vw 2.8vw 2.4vw 3vw;
+  border-radius: 25px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  justify-content: space-between;
+}
+.TuitionFlexBox .TuitionInfoWrapper .MainText {
+  width: auto;
+  max-width: 21.5vw;
+  line-height: 1.65vw;
+}
+
+.DisciplinesGrid {
+  display: grid;
+  margin-top: 5vw;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 1vw;
+  grid-row-gap: 1.5vw;
+}
+.DisciplinesGrid .Discipline {
+  border-radius: 36px;
+  padding: 3.3vw 3.3vw 4.4vw 3vw;
+  background: #ff4900;
+  min-width: 0;
+  height: 12.6vw;
+  display: flex;
+  justify-content: space-between;
+}
+.DisciplinesGrid .MainText {
+  width: 28vw;
+  line-height: 1.6vw;
+}
+.DisciplinesGrid .FlexBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+.DisciplinesGrid .NumberWrapper {
+  width: 4.4vw;
+  height: 4.4vw;
+  background: #ffffff;
+  border-radius: 100%;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.DisciplinesGrid .NumberWrapper .Number {
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: 1.7vw;
+  line-height: 1.7vw;
+}
+
+.FaqFlexBox {
+  display: flex;
+  flex-direction: column;
+  gap: 2.16vw;
+}
+.FaqFlexBox .FaqItem {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.FaqFlexBox .FaqItem .Modal .Header {
+  max-width: 63vw;
+}
+.FaqFlexBox .FaqItem .SubTitle {
+  font-weight: 600;
+  line-height: 2.1vw;
+  margin-bottom: 0;
+  letter-spacing: -0.07vw;
+}
+.FaqFlexBox .PlusIconWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5vw;
+  height: 2.5vw;
+  background: #d9d9d9;
+  border-radius: 100%;
+}
+.FaqFlexBox .PlusIconWrapper > * {
+  transition: all 0.5s ease;
+}
+.FaqFlexBox .PlusIconWrapper :hover {
+  opacity: 0.5;
+}
+.FaqFlexBox .PlusIconWrapper svg {
+  width: 1.5vw;
+  height: 1.5vw;
+}
+.FaqFlexBox .PlusIconWrapper svg :hover {
+  opacity: 1;
+}
+
+.CourseSummaryWrapper {
+  border-radius: 25px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
+}
+.CourseSummaryWrapper .CourseSummaryItem {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  padding: 2.4vw 2.4vw 2vw 2.4vw;
+  border-bottom: 1px solid #d9d9d9;
+  align-items: center;
+}
+.CourseSummaryWrapper .CourseSummaryItem:last-of-type {
+  padding-bottom: 2.4vw;
+}
+.CourseSummaryWrapper .CourseSummaryItem .FlexBox {
+  display: flex;
+  flex-direction: column;
+  gap: 1.3vw;
+}
+.CourseSummaryWrapper .CourseSummaryItem .FlexBox .SubTitle {
+  font-weight: 600;
+}
+.CourseSummaryWrapper .CourseSummaryItem .SubTitle {
+  margin-bottom: 0;
+}
+.CourseSummaryWrapper .CourseSummaryItem .PlusIconWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.5vw;
+  height: 3.5vw;
+  background: #d9d9d9;
+  border-radius: 100%;
+  transition: 0.5s ease all;
+}
+.CourseSummaryWrapper .CourseSummaryItem .PlusIconWrapper :hover {
+  opacity: 0.5;
+}
+.CourseSummaryWrapper .CourseSummaryItem .PlusIconWrapper svg {
+  width: 2.5vw;
+  height: 2.5vw;
+  transition: 0.5s ease all;
+}
+.CourseSummaryWrapper .CourseSummaryItem .PlusIconWrapper svg :hover {
+  opacity: 1;
+}
+
+.Illustration {
+  position: absolute;
+  right: -2vw;
+  background: url("images/IllustrationOne.svg");
+  background-size: contain;
+  width: 37.5vw;
+  height: 20vw;
+  background-repeat: no-repeat;
+  margin-top: 0.8vw;
+}
+
+.IllustrationTwo {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: url("images/IllustrationTwo.svg");
+  background-size: contain;
+  width: 33.2vw;
+  height: 18.7vw;
+  background-repeat: no-repeat;
+  background-position: 0 -0.6vw;
+}
+
+.IllustrationThree {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: url("images/IllustrationThree.svg");
+  background-size: contain;
+  width: 25.9vw;
+  background-repeat: no-repeat;
+  height: 32.5vw;
+}
+
+.IllustrationFour {
+  position: absolute;
+  top: 0;
+  right: 1vw;
+  background: url("images/IllustratonFour.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 27.5vw;
+  height: 17.9vw;
+}
+
+.IllustrationFive {
+  position: absolute;
+  top: 13vw;
+  right: 35.5vw;
+  background: url("images/IllustrationFive.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 21.5vw;
+  height: 17.9vw;
+}
+
+.TxtImgFlexBox {
+  display: flex;
+  justify-content: space-between;
+}
+.TxtImgFlexBox .MainText {
+  letter-spacing: -0.008vw;
+}
+
+.SectionWrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+#text {
+  padding-left: 0.6vw;
+}
+
+.ActivitiesGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 1.7vw;
+  grid-row-gap: 1.7vw;
+}
+
+.ActivityWrapper {
+  background: #ff4900;
+  display: flex;
+  min-width: 0;
+  text-align: center;
+  height: 7vw;
+  border-radius: 25px;
+  align-items: center;
+  justify-content: center;
+}
+
+.Activity {
+  min-width: 0;
+  font-family: Montserrat;
+  font-weight: 400;
+  font-size: 1.21vw;
+  width: 40vw;
+  line-height: 1.5vw;
+  color: #ffffff;
+  max-width: 22vw;
+}
+
+#big {
+  border-radius: 25px;
+  padding: 2.3vw 2.6vw;
+}
+#big .Content {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.WithBg {
+  background: url("images/bg.jpg");
+  background-size: cover;
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
+}
+
+.NoBg {
+  background: #ff4900;
+}
+.NoBg .ContentWrapper {
+  padding: 6vw 0 4.5vw 0;
+}
+.NoBg .ContentWrapper .Title {
+  margin-bottom: 5vw;
+}
+.NoBg .ContentWrapper .Title span {
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.ContentWrapper {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  padding: 7.9vw 0 6.4vw 0;
+  justify-content: center;
+}
+
+@-webkit-keyframes labelAnimation {
+  0% {
+    transform: translate(0px, 0px) rotate(0deg) scale(1);
+    opacity: 1;
+    -webkit-animation-timing-function: ease-in-out;
+            animation-timing-function: ease-in-out;
+  }
+  40% {
+    transform: translate(0px, 0px) rotate(5deg) scale(1);
+    opacity: 1;
+    -webkit-animation-timing-function: ease-in-out;
+            animation-timing-function: ease-in-out;
+  }
+  80% {
+    transform: translate(0px, 0px) rotate(-5deg) scale(1);
+    opacity: 1;
+    -webkit-animation-timing-function: ease-in-out;
+            animation-timing-function: ease-in-out;
+  }
+  100% {
+    transform: translate(0px, 0px) rotate(0deg) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes labelAnimation {
+  0% {
+    transform: translate(0px, 0px) rotate(0deg) scale(1);
+    opacity: 1;
+    -webkit-animation-timing-function: ease-in-out;
+            animation-timing-function: ease-in-out;
+  }
+  40% {
+    transform: translate(0px, 0px) rotate(5deg) scale(1);
+    opacity: 1;
+    -webkit-animation-timing-function: ease-in-out;
+            animation-timing-function: ease-in-out;
+  }
+  80% {
+    transform: translate(0px, 0px) rotate(-5deg) scale(1);
+    opacity: 1;
+    -webkit-animation-timing-function: ease-in-out;
+            animation-timing-function: ease-in-out;
+  }
+  100% {
+    transform: translate(0px, 0px) rotate(0deg) scale(1);
+    opacity: 1;
+  }
+}
+.Label {
+  -webkit-animation: labelAnimation 0.5s 0s infinite normal none;
+          animation: labelAnimation 0.5s 0s infinite normal none;
+  top: 0;
+  left: 0;
+  position: absolute;
+  background-color: #ffffff;
+  width: 18.3vw;
+  height: 4vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 22px;
+}
+.Label span {
+  font-family: "Inter", sans-serif;
+  color: black;
+  font-size: 1.2vw;
+  font-weight: 600;
+}/*# sourceMappingURL=style.css.map */

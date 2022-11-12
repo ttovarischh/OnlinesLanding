@@ -1,0 +1,616 @@
+// COLOR_VARS
+$o-orange: #ff4900;
+$o-black: black;
+$o-white: #ffffff;
+$o-med-grey: #6b6b6b;
+$o-light-grey: #d9d9d9;
+
+// TYPOGRAPHY_VARS
+$space: Space Grotesk;
+$inter: "Inter", sans-serif;
+$montserrat: Montserrat;
+
+// FONTSIZE_VARS
+$p92: 4.7vw;
+$p91: 4.3vw;
+$p90: 4.1vw;
+$p72: 3.9vw;
+$p60: 3vw;
+$p38: 1.8vw;
+$p37: 1.79vw;
+$p36: 1.7vw;
+$p24m: 1.4vw;
+$p24c: 1.3vw;
+$p24: 1.28vw;
+$p22: 1.21vw;
+$p20: 1.2vw;
+$p17: 1vw;
+
+// FILTER_VARS
+$small-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+$medium-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
+$big-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
+
+body {
+  overflow: auto;
+  margin: 0;
+  //   background-image: url("images/1.png");
+  background-color: $o-white;
+  background-size: 100% auto;
+  background-position: 0px 0px;
+  p {
+    margin: 0;
+  }
+  a {
+    text-decoration: none;
+  }
+}
+.BodyModalShown {
+  overflow: hidden;
+  .CourseSummaryItem,
+  .FaqItem {
+    cursor: default !important;
+  }
+}
+.Modal {
+  display: none;
+  z-index: 100;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  // background: url("images/2.png");
+  background-color: $o-white;
+  background-size: cover;
+  align-items: center;
+  .ModalContent {
+    display: flex;
+    margin: 0 3vw 0 9.4vw;
+    height: 64%;
+    width: 100%;
+    justify-content: space-between;
+    .ModalInfo {
+      margin-bottom: auto;
+      margin-top: auto;
+    }
+    .Number {
+      font-family: $montserrat;
+      font-weight: 600;
+      font-size: $p38;
+      line-height: 1.7vw;
+      margin-bottom: 3%;
+    }
+    .Header {
+      font-family: $space;
+      font-weight: 500;
+      font-size: $p92;
+      line-height: 5.1vw;
+      letter-spacing: -0.05vw;
+      margin-left: -0.2vw;
+      margin-bottom: 5%;
+    }
+    .MainText {
+      font-weight: 400;
+      letter-spacing: 0.045vw;
+    }
+    .CloseIconWrapper {
+      flex-shrink: 0;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 2.5vw;
+      height: 2.5vw;
+      background: $o-light-grey;
+      border-radius: 100%;
+      svg {
+        width: 1.9vw;
+        height: 1.9vw;
+      }
+    }
+  }
+}
+.Button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $o-black;
+  text-align: center;
+  height: 5vw;
+  width: 27vw;
+  border-radius: 16px;
+  margin-bottom: 1.6vw;
+  > * {
+    transition: all 0.5s ease;
+  }
+  :hover {
+    opacity: 0.7;
+  }
+  span {
+    font-family: $montserrat;
+    font-size: $p38;
+    line-height: 1.85vw;
+    font-weight: 500;
+    color: $o-white;
+  }
+}
+.NoteTwo {
+  font-family: $montserrat;
+  font-weight: 600;
+  font-size: $p24;
+  line-height: 1.28vw;
+  text-align: center;
+  margin: 1.85vw 0 7.1vw 0;
+}
+.Title {
+  font-family: $space;
+  font-weight: 500;
+  font-size: $p60;
+  line-height: 3.5vw;
+  letter-spacing: 0.05vw;
+  width: 60vw;
+  margin-bottom: 3.2vw;
+}
+.ProsFlexBox {
+  display: flex;
+  flex-direction: column;
+  gap: 1.9vw;
+  .ProsWrapper {
+    padding: 2.2vw 2.1vw 2.1vw 2.1vw;
+    display: flex;
+    align-items: baseline;
+    box-shadow: $medium-shadow;
+    gap: 7vw;
+    border-radius: 25px;
+    .MainText {
+      line-height: 1.5vw;
+      width: 100%;
+      letter-spacing: -0.007vw;
+    }
+  }
+}
+.MainWrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 108px 7.55vw 5.4vw 7.55vw;
+  //   opacity: 0.7;
+  .CapitalText {
+    font-family: $montserrat;
+    font-weight: 600;
+    font-size: $p24c;
+    line-height: 1.7vw;
+    text-transform: uppercase;
+    letter-spacing: -0.01vw;
+    min-width: 25.3vw;
+  }
+  .MainHeader {
+    font-family: $space;
+    font-size: $p91;
+    font-weight: 600;
+    letter-spacing: 0.2vw;
+    color: rgba(0, 0, 0, 1);
+    line-height: 5.1vw;
+    margin-bottom: 6.6vw;
+  }
+  .Header {
+    font-family: $space;
+    font-weight: 500;
+    font-size: $p90;
+    line-height: 5.1vw;
+    letter-spacing: 0.25vw;
+    margin-bottom: 3.4vw;
+  }
+  .Breadcrumb {
+    font-family: $inter;
+    font-weight: 400;
+    font-size: $p17;
+    line-height: 1vw;
+    text-transform: uppercase;
+    color: $o-med-grey;
+    letter-spacing: -0.04vw;
+  }
+  .SubHeader {
+    font-family: $space;
+    font-weight: 500;
+    font-size: $p72;
+    line-height: 5.1vw;
+    letter-spacing: -0.1vw;
+    margin: 10.8vw 0 2.6vw 0;
+  }
+  .SubTitle {
+    font-weight: 500;
+    color: rgba(0, 0, 0, 1);
+    font-family: $montserrat;
+    font-size: $p37;
+    letter-spacing: 0.6px;
+    line-height: 1.79vw;
+    margin-bottom: 1.3vw;
+  }
+  .MainSubTitle {
+    font-weight: 400;
+    color: rgba(0, 0, 0, 1);
+    font-family: $space;
+    font-size: $p37;
+    font-variation-settings: "wght" 500;
+    letter-spacing: 0.6px;
+    line-height: 1.79vw;
+    margin-bottom: 2vw;
+  }
+  .NoteOne {
+    font-family: $montserrat;
+    font-weight: 500;
+    font-size: $p24;
+    line-height: 1.28vw;
+  }
+}
+.FutureWrapper {
+  display: flex;
+  flex-direction: column;
+  margin-top: 5.9vw;
+  .FutureListWrapper {
+    box-shadow: $medium-shadow;
+    display: flex;
+    padding: 2.4vw 13vw 2.5vw 6.4vw;
+    justify-content: space-between;
+    border-radius: 25px;
+    ul {
+      padding: 0;
+      display: inline-block;
+      max-width: 16.2vw;
+      li {
+        font-family: $montserrat;
+        font-weight: 400;
+        font-size: $p24;
+        line-height: 1.8vw;
+        list-style: none;
+        text-indent: -1.1vw;
+        padding-left: 1.1vw;
+        margin-bottom: 0.2vw;
+      }
+      li:before {
+        content: "·";
+        font-size: 2vw;
+        vertical-align: text-top;
+        line-height: 1.8vw;
+        margin-right: 0.7vw;
+      }
+    }
+  }
+}
+
+.MainText {
+  font-family: $montserrat;
+  font-weight: 500;
+  font-size: $p24;
+  width: 40vw;
+  line-height: 1.8vw;
+  letter-spacing: -0.02vw;
+}
+.MainTextWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5vw;
+}
+.TuitionFlexBox {
+  display: flex;
+  justify-content: space-between;
+  z-index: 10;
+  .TuitionInfoWrapper {
+    background: $o-white;
+    display: flex;
+    width: 44.5vw;
+    padding: 2vw 2.8vw 2.4vw 3vw;
+    border-radius: 25px;
+    box-shadow: $small-shadow;
+    justify-content: space-between;
+    .MainText {
+      width: auto;
+      max-width: 21.5vw;
+      line-height: 1.65vw;
+    }
+  }
+}
+
+.DisciplinesGrid {
+  display: grid;
+  margin-top: 5vw;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 1vw;
+  grid-row-gap: 1.5vw;
+
+  .Discipline {
+    border-radius: 36px;
+    padding: 3.3vw 3.3vw 4.4vw 3vw;
+    background: $o-orange;
+    min-width: 0;
+    height: 12.6vw;
+    display: flex;
+    justify-content: space-between;
+  }
+  .MainText {
+    width: 28vw;
+    line-height: 1.6vw;
+  }
+  .FlexBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+  }
+  .NumberWrapper {
+    width: 4.4vw;
+    height: 4.4vw;
+    background: $o-white;
+    border-radius: 100%;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .Number {
+      font-family: $inter;
+      font-weight: 500;
+      font-size: $p36;
+      line-height: 1.7vw;
+    }
+  }
+}
+.FaqFlexBox {
+  display: flex;
+  flex-direction: column;
+  gap: 2.16vw;
+  .FaqItem {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .Modal {
+      .Header {
+        max-width: 63vw;
+      }
+    }
+    .SubTitle {
+      font-weight: 600;
+      line-height: 2.1vw;
+      margin-bottom: 0;
+      letter-spacing: -0.07vw;
+    }
+  }
+  .PlusIconWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5vw;
+    height: 2.5vw;
+    background: $o-light-grey;
+    border-radius: 100%;
+    > * {
+      transition: all 0.5s ease;
+    }
+    :hover {
+      opacity: 0.5;
+    }
+    svg {
+      width: 1.5vw;
+      height: 1.5vw;
+      :hover {
+        opacity: 1;
+      }
+    }
+  }
+}
+.CourseSummaryWrapper {
+  border-radius: 25px;
+  box-shadow: $big-shadow;
+  .CourseSummaryItem {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    padding: 2.4vw 2.4vw 2vw 2.4vw;
+    border-bottom: 1px solid $o-light-grey;
+    align-items: center;
+    &:last-of-type {
+      padding-bottom: 2.4vw;
+    }
+    .FlexBox {
+      display: flex;
+      flex-direction: column;
+      gap: 1.3vw;
+      .SubTitle {
+        font-weight: 600;
+      }
+    }
+    .SubTitle {
+      margin-bottom: 0;
+    }
+    .PlusIconWrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 3.5vw;
+      height: 3.5vw;
+      background: $o-light-grey;
+      border-radius: 100%;
+      transition: 0.5s ease all;
+      :hover {
+        opacity: 0.5;
+      }
+      svg {
+        width: 2.5vw;
+        height: 2.5vw;
+        transition: 0.5s ease all;
+        :hover {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+.Illustration {
+  position: absolute;
+  right: -2vw;
+  background: url("images/IllustrationOne.svg");
+  background-size: contain;
+  width: 37.5vw;
+  height: 20vw;
+  background-repeat: no-repeat;
+  margin-top: 0.8vw;
+}
+.IllustrationTwo {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: url("images/IllustrationTwo.svg");
+  background-size: contain;
+  width: 33.2vw;
+  height: 18.7vw;
+  background-repeat: no-repeat;
+  background-position: 0 -0.6vw;
+}
+.IllustrationThree {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: url("images/IllustrationThree.svg");
+  background-size: contain;
+  width: 25.9vw;
+  background-repeat: no-repeat;
+  height: 32.5vw;
+}
+.IllustrationFour {
+  position: absolute;
+  top: 0;
+  right: 1vw;
+  background: url("images/IllustratonFour.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 27.5vw;
+  height: 17.9vw;
+}
+.IllustrationFive {
+  position: absolute;
+  top: 13vw;
+  right: 35.5vw;
+  background: url("images/IllustrationFive.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 21.5vw;
+  height: 17.9vw;
+}
+.TxtImgFlexBox {
+  display: flex;
+  justify-content: space-between;
+  .MainText {
+    letter-spacing: -0.008vw;
+  }
+}
+.SectionWrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+#text {
+  padding-left: 0.6vw;
+}
+.ActivitiesGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 1.7vw;
+  grid-row-gap: 1.7vw;
+}
+.ActivityWrapper {
+  background: $o-orange;
+  display: flex;
+  min-width: 0;
+  text-align: center;
+  height: 7vw;
+  border-radius: 25px;
+  align-items: center;
+  justify-content: center;
+}
+.Activity {
+  min-width: 0;
+  font-family: $montserrat;
+  font-weight: 400;
+  font-size: $p22;
+  width: 40vw;
+  line-height: 1.5vw;
+  color: $o-white;
+  max-width: 22vw;
+}
+#big {
+  border-radius: 25px;
+  padding: 2.3vw 2.6vw;
+  .Content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+  }
+}
+.WithBg {
+  background: url("images/bg.jpg");
+  background-size: cover;
+  box-shadow: $medium-shadow;
+}
+.NoBg {
+  background: $o-orange;
+  .ContentWrapper {
+    padding: 6vw 0 4.5vw 0;
+    .Title {
+      margin-bottom: 5vw;
+      span {
+        color: $o-white;
+        text-transform: uppercase;
+      }
+    }
+  }
+}
+.ContentWrapper {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  padding: 7.9vw 0 6.4vw 0;
+  justify-content: center;
+}
+@keyframes labelAnimation {
+  0% {
+    transform: translate(0px, 0px) rotate(0deg) scale(1);
+    opacity: 1;
+    animation-timing-function: ease-in-out;
+  }
+  40% {
+    transform: translate(0px, 0px) rotate(5deg) scale(1);
+    opacity: 1;
+    animation-timing-function: ease-in-out;
+  }
+  80% {
+    transform: translate(0px, 0px) rotate(-5deg) scale(1);
+    opacity: 1;
+    animation-timing-function: ease-in-out;
+  }
+  100% {
+    transform: translate(0px, 0px) rotate(0deg) scale(1);
+    opacity: 1;
+  }
+}
+.Label {
+  animation: labelAnimation 0.5s 0s infinite normal none;
+  top: 0;
+  left: 0;
+  position: absolute;
+  background-color: $o-white;
+  width: 18.3vw;
+  height: 4vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 22px;
+  span {
+    font-family: $inter;
+    color: $o-black;
+    font-size: $p20;
+    font-weight: 600;
+  }
+}
