@@ -1,4 +1,8 @@
 @charset "UTF-8";
+html {
+  font-size: 1vw;
+}
+
 body {
   overflow: auto;
   margin: 0;
@@ -88,7 +92,7 @@ body a {
   text-align: center;
   height: 5vw;
   width: 27vw;
-  border-radius: 16px;
+  border-radius: 1.2rem;
   margin-bottom: 1.6vw;
 }
 .Button > * {
@@ -135,7 +139,7 @@ body a {
   align-items: baseline;
   box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
   gap: 7vw;
-  border-radius: 25px;
+  border-radius: 1.5rem;
 }
 .ProsFlexBox .ProsWrapper .MainText {
   line-height: 1.5vw;
@@ -227,7 +231,7 @@ body a {
   display: flex;
   padding: 2.4vw 13vw 2.5vw 6.4vw;
   justify-content: space-between;
-  border-radius: 25px;
+  border-radius: 1.5rem;
 }
 .FutureWrapper .FutureListWrapper ul {
   padding: 0;
@@ -277,7 +281,7 @@ body a {
   display: flex;
   width: 44.5vw;
   padding: 2vw 2.8vw 2.4vw 3vw;
-  border-radius: 25px;
+  border-radius: 1.5rem;
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
   justify-content: space-between;
 }
@@ -295,7 +299,7 @@ body a {
   grid-row-gap: 1.5vw;
 }
 .DisciplinesGrid .Discipline {
-  border-radius: 36px;
+  border-radius: 2.5rem;
   padding: 3.3vw 3.3vw 4.4vw 3vw;
   background: #ff4900;
   min-width: 0;
@@ -374,7 +378,7 @@ body a {
 }
 
 .CourseSummaryWrapper {
-  border-radius: 25px;
+  border-radius: 1.5rem;
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
 }
 .CourseSummaryWrapper .CourseSummaryItem {
@@ -508,7 +512,7 @@ body a {
   min-width: 0;
   text-align: center;
   height: 7vw;
-  border-radius: 25px;
+  border-radius: 1.5rem;
   align-items: center;
   justify-content: center;
 }
@@ -525,7 +529,7 @@ body a {
 }
 
 #big {
-  border-radius: 25px;
+  border-radius: 1.5rem;
   padding: 2.3vw 2.6vw;
 }
 #big .Content {
@@ -625,7 +629,7 @@ body a {
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 22px;
+  border-radius: 1.3rem;
 }
 .Label span {
   font-family: "Inter", sans-serif;
