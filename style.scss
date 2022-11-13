@@ -60,11 +60,11 @@ html {
     font-size: 4.6vw;
   }
 }
-
 body {
-  overflow: auto;
   margin: 0;
-  overflow-x: hidden;
+  @media screen and (max-width: $mob) {
+    overflow-x: hidden;
+  }
   // background-image: url("images/i.png");
   // background-image: url("images/4.png");
   // background-position: 0px -216px;
@@ -969,6 +969,7 @@ body {
 }
 .Label {
   animation: labelAnimation 0.5s 0s infinite normal none;
+  pointer-events: none;
   top: 0;
   left: 0;
   position: absolute;

@@ -2,6 +2,7 @@ $(document).ready(function () {
   $(".CloseIconWrapper").click(function (e) {
     $(".Modal").fadeOut();
     $("body").removeClass("BodyModalShown");
+    $(document.documentElement).css("overflow", "auto");
     e.preventDefault();
     e.stopPropagation();
   });
@@ -9,6 +10,7 @@ $(document).ready(function () {
     if ($(".Modal", this).is(":hidden")) {
       $(".Modal", this).css("display", "flex").hide().fadeIn();
       $("body").addClass("BodyModalShown");
+      $(document.documentElement).css("overflow", "hidden");
       e.preventDefault();
     }
   });
@@ -16,6 +18,7 @@ $(document).ready(function () {
     if ($(".Modal", this).is(":hidden")) {
       $(".Modal", this).css("display", "flex").hide().fadeIn();
       $("body").addClass("BodyModalShown");
+      $(document.documentElement).css("overflow", "hidden");
       e.preventDefault();
     }
   });

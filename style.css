@@ -10,10 +10,13 @@ html {
 }
 
 body {
-  overflow: auto;
   margin: 0;
-  overflow-x: hidden;
   background-color: #ffffff;
+}
+@media screen and (max-width: 480px) {
+  body {
+    overflow-x: hidden;
+  }
 }
 body p {
   margin: 0;
@@ -1085,6 +1088,7 @@ body a {
 .Label {
   -webkit-animation: labelAnimation 0.5s 0s infinite normal none;
           animation: labelAnimation 0.5s 0s infinite normal none;
+  pointer-events: none;
   top: 0;
   left: 0;
   position: absolute;
